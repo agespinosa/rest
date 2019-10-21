@@ -132,4 +132,11 @@ class Task
 
         return $this;
     }
+
+    public function setList(?TaskList $list): self
+    {
+        $this->list = $list;
+
+        return $this;
+    }
 }

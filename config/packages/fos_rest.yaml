@@ -4,11 +4,15 @@ fos_rest:
       default_format: json
       include_format: false
 
+  body_listener: true
+
   format_listener:
       rules:
           - { path: '^/',  priorities: ['json'], fallback_format: json }
   exception:
       enabled: true
+  param_fetcher_listener: true
+
   view:
       view_response_listener: 'force'
       formats:
